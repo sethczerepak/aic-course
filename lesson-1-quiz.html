@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 1 Quiz Gate - Subject. Verb. Object.</title>
+<style>
+:root{--surface-2:#ffffff;--surface-1:#faf9f5;--surface-0:#f1efe8;--border:#e3e1d8;--border-strong:#d3d1c7;--text-primary:#2c2c2a;--text-secondary:#5f5e5a;--bg-accent:#e6f1fb;--text-accent:#0c447c;--border-accent:#378add;--radius:8px;--font-mono:ui-monospace,SFMono-Regular,Menlo,monospace}
+@media(prefers-color-scheme:dark){:root{--surface-2:#26262b;--surface-1:#2e2e34;--surface-0:#1d1d21;--border:#3a3a40;--border-strong:#4a4a52;--text-primary:#ECEAE3;--text-secondary:#b4b2a9;--bg-accent:#0c2740;--text-accent:#85b7eb;--border-accent:#378add}}
+body{background:var(--surface-0);color:var(--text-primary);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;max-width:720px;margin:0 auto;padding:2rem 1rem;line-height:1.5}
+h1{font-size:20px;font-weight:500;margin:0 0 4px}
+.sub{color:var(--text-secondary);font-size:14px;margin:0 0 20px}
+.qz-intro{font-size:15px;color:var(--text-secondary);margin:0 0 16px;line-height:1.5}
+.q{background:var(--surface-2);border:0.5px solid var(--border);border-radius:12px;padding:1rem 1.25rem;margin:0 0 12px}
+.qnum{font-size:13px;color:var(--text-secondary);margin:0 0 6px}
+.qtext{font-size:16px;color:var(--text-primary);margin:0 0 12px;line-height:1.5}
+.opt{display:block;width:100%;text-align:left;margin:0 0 8px;padding:10px 12px;border:0.5px solid var(--border-strong);border-radius:var(--radius);background:var(--surface-1);color:var(--text-primary);cursor:pointer;font-size:15px;line-height:1.4}
+.opt:hover{background:var(--surface-0)}
+.opt[aria-pressed="true"]{border:2px solid var(--border-accent);background:var(--bg-accent);color:var(--text-accent)}
+.qz-btn{margin-top:4px;padding:10px 18px;border-radius:var(--radius);border:2px solid var(--border-accent);background:var(--bg-accent);color:var(--text-accent);font-size:15px;cursor:pointer}
+.qz-btn:hover{background:var(--surface-1)}
+.qz-result{margin-top:14px;font-size:15px;line-height:1.6}
+.qz-miss{background:var(--surface-1);border:0.5px solid var(--border);border-radius:12px;padding:12px 14px;color:var(--text-primary)}
+.qz-ok{color:var(--text-accent);font-size:16px;margin:0 0 10px}
+.copybox{background:var(--surface-1);border:0.5px solid var(--border);border-radius:12px;padding:14px;font-family:var(--font-mono);font-size:13px;white-space:pre-wrap;color:var(--text-primary);margin:8px 0}
+.qz-result ul{margin:8px 0 0;padding-left:20px}
+</style>
+</head>
+<body>
+<h1>Lesson 1 quiz</h1>
+<p class="sub">Subject. Verb. Object. Pass all five to unlock your first rule.</p>
+<p class="qz-intro">Answer all five to unlock your first rule. Miss one and the rule stays locked, so rewatch and try again.</p>
+<div id="qz">
+  <div class="q" data-correct="A" data-section="the part on linking verbs and action verbs">
+    <p class="qnum">Question 1 of 5</p>
+    <p class="qtext">Which one of these is built on a verb that just sits there with no energy?</p>
+    <button class="opt" data-opt="A" aria-pressed="false" type="button">This home is perfect for families.</button>
+    <button class="opt" data-opt="B" aria-pressed="false" type="button">This home sits two blocks from the best school in town.</button>
+  </div>
+  <div class="q" data-correct="A" data-section="the part on hedging words">
+    <p class="qnum">Question 2 of 5</p>
+    <p class="qtext">Which one of these still has a hedging word that drains energy from the writing?</p>
+    <button class="opt" data-opt="A" aria-pressed="false" type="button">This pretty much works for most people.</button>
+    <button class="opt" data-opt="B" aria-pressed="false" type="button">This works.</button>
+  </div>
+  <div class="q" data-correct="B" data-section="the examples across different businesses">
+    <p class="qnum">Question 3 of 5</p>
+    <p class="qtext">Which one of these has more energy?</p>
+    <button class="opt" data-opt="A" aria-pressed="false" type="button">This serum is good for dry skin.</button>
+    <button class="opt" data-opt="B" aria-pressed="false" type="button">This serum floods dry skin with water.</button>
+  </div>
+  <div class="q" data-correct="B" data-section="the examples across different businesses">
+    <p class="qnum">Question 4 of 5</p>
+    <p class="qtext">Which one of these has more energy?</p>
+    <button class="opt" data-opt="A" aria-pressed="false" type="button">The platform is easy to set up.</button>
+    <button class="opt" data-opt="B" aria-pressed="false" type="button">The platform walks you through setup in ninety seconds.</button>
+  </div>
+  <div class="q" data-correct="B" data-section="the part on doing the move yourself before the AI">
+    <p class="qnum">Question 5 of 5</p>
+    <p class="qtext">You find a flat line in a piece of copy. What do you do first?</p>
+    <button class="opt" data-opt="A" aria-pressed="false" type="button">Paste it into an AI and tell it to make it stronger.</button>
+    <button class="opt" data-opt="B" aria-pressed="false" type="button">Find the real action yourself, then bring it to the AI.</button>
+  </div>
+</div>
+<button id="qz-unlock" class="qz-btn" type="button">Unlock the rule</button>
+<div id="qz-result" class="qz-result"></div>
+<script>
+(function(){
+  var rule="// BLOCK 1. ENERGY. SUBJECT. VERB. OBJECT.\n"+
+"Scan every line I give you for linking verbs: is, was, were, are, be, been, being.\n"+
+"Do not rewrite a linking verb on your own. You cannot see the real action in my writing. Only I can.\n"+
+"Stop and ask me two questions. What is the real action in this line. Who is doing it to whom.\n"+
+"Wait for my answer. Once I name the action and the actor, rewrite the line as subject, action verb, object, so something does something to someone.\n"+
+"Then strip every hedging word: rather, somewhat, generally, virtually, pretty, slightly, usually, a bit, a little, kind of.\n"+
+"Keep this rule running on every line, before any rule I add in a later lesson.";
+  var qs=Array.prototype.slice.call(document.querySelectorAll('#qz .q'));
+  qs.forEach(function(q){
+    q.querySelectorAll('.opt').forEach(function(b){
+      b.addEventListener('click',function(){
+        q.querySelectorAll('.opt').forEach(function(x){x.setAttribute('aria-pressed','false');});
+        b.setAttribute('aria-pressed','true');
+      });
+    });
+  });
+  document.getElementById('qz-unlock').addEventListener('click',function(){
+    var res=document.getElementById('qz-result');
+    var answered=qs.every(function(q){return q.querySelector('.opt[aria-pressed="true"]');});
+    if(!answered){res.innerHTML='<div class="qz-miss">Answer all five questions first.</div>';return;}
+    var miss=[];
+    qs.forEach(function(q){
+      var sel=q.querySelector('.opt[aria-pressed="true"]').getAttribute('data-opt');
+      if(sel!==q.getAttribute('data-correct')){var s=q.getAttribute('data-section');if(miss.indexOf(s)<0)miss.push(s);}
+    });
+    if(miss.length===0){
+      res.innerHTML='<p class="qz-ok">You proved the move is yours. Here is your first rule. Paste it into your copy editor project and save it.</p><div class="copybox" id="qz-rule"></div><button class="qz-btn" id="qz-copy" type="button">Copy the rule</button>';
+      document.getElementById('qz-rule').textContent=rule;
+      document.getElementById('qz-copy').addEventListener('click',function(){navigator.clipboard.writeText(rule).then(function(){document.getElementById('qz-copy').textContent='Copied';});});
+    } else {
+      var list=miss.map(function(s){return '<li>'+s+'</li>';}).join('');
+      res.innerHTML='<div class="qz-miss">Not yet. The rule stays locked. Rewatch these parts, then try again:<ul>'+list+'</ul></div>';
+    }
+  });
+})();
+</script>
+</body>
+</html>
