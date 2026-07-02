@@ -135,6 +135,11 @@ h1{font-weight:700;font-size:46px;line-height:1.03;color:var(--cream);margin:4px
     }
     res.scrollIntoView({behavior:'smooth',block:'center'});
   });
+  // Auto-resize when embedded in a GHL page (iframe). Posts its height to the parent.
+  function postH(){ if(window.parent!==window){ try{ window.parent.postMessage({aicQuizHeight: document.documentElement.scrollHeight}, '*'); }catch(e){} } }
+  window.addEventListener('load', function(){ postH(); setTimeout(postH,350); });
+  window.addEventListener('resize', postH);
+  try{ new MutationObserver(postH).observe(document.body, {subtree:true, childList:true, attributes:true, attributeFilter:['aria-pressed','style']}); }catch(e){}
 })();
 </script>
 </body></html>
