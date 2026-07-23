@@ -98,7 +98,7 @@ h1{font-weight:700;font-size:46px;line-height:1.03;color:var(--cream);margin:4px
 </div>
 <script>
 (function(){
-  var VIDEO_URL = "https://www.youtube.com/playlist?list=PLPYaYez80UNE";
+  var VIDEO_URL = "https://www.youtube.com/watch?v=6DWLc3g1rHw";
   var rule = "// BLOCK 4. CLARITY. CONCRETE AND SPECIFIC.\n"+
 "Assume Blocks 1 through 3 are installed and running. Keep them running.\n"+
 "For every line I give you, scan for a vague word: a word that names a category, not a thing. Words like results, quality, value, solutions, effective, world-class, robust.\n"+
@@ -133,7 +133,7 @@ h1{font-weight:700;font-size:46px;line-height:1.03;color:var(--cream);margin:4px
       document.getElementById('copy').addEventListener('click',function(){navigator.clipboard.writeText(rule).then(function(){document.getElementById('copy').textContent='Copied';});});
     } else {
       var list=miss.map(function(s){return '<li>'+s+'</li>';}).join('');
-      res.innerHTML='<div class="miss"><h3>Not yet &mdash; the rule stays locked</h3><p>Rewatch these parts of the lesson, then try again:</p><ul>'+list+'</ul><a class="rewatch" href="'+VIDEO_URL+'" target="_blank" rel="noopener">Rewatch the lesson &nbsp;&rarr;</a></div>';
+      res.innerHTML='<div class="miss"><h3>Not yet &mdash; the rule stays locked</h3><p>Rewatch these parts of the lesson, then try again:</p><ul>'+list+'</ul><a class="rewatch" href="'+VIDEO_URL+'" target="_blank" rel="noopener">Rewatch Lesson 4 &nbsp;&rarr;</a></div>';
     }
     res.scrollIntoView({behavior:'smooth',block:'center'});
   });
