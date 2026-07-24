@@ -131,7 +131,7 @@ h1{font-weight:700;font-size:46px;line-height:1.03;color:var(--cream);margin:4px
       if(sel!==q.getAttribute('data-correct')){var s=q.getAttribute('data-section');if(miss.indexOf(s)<0)miss.push(s);}
     });
     if(miss.length===0){
-      res.innerHTML='<div class="ok"><h2>You just proved you can feel it.</h2><p>Here is your third rule. Paste it into your AI copy-editor project, right under the second one, and save it there.</p><div class="code" id="rule"></div><button class="copy" id="copy" type="button">Copy the Rule</button></div>';
+      res.innerHTML='<div class="ok"><h2>Unlocked: Your Lesson 3 AI Editor Rule</h2><p>This is the third rule for your AI copy editor. Copy it and paste it into the same AI, right under your Lesson 2 rule. Now the AI also turns flat, abstract lines into copy a reader can see, hear, and feel. Keep stacking one rule each lesson.</p><div class="code" id="rule"></div><button class="copy" id="copy" type="button">Copy the Rule</button></div>';
       document.getElementById('rule').textContent=rule;
       document.getElementById('rule').innerHTML=document.getElementById('rule').innerHTML.replace(/(\/\/ BLOCK[^\n]*)/,'<span class="cm">$1</span>');
       document.getElementById('copy').addEventListener('click',function(){navigator.clipboard.writeText(rule).then(function(){document.getElementById('copy').textContent='Copied';});});

@@ -125,7 +125,7 @@ h1{font-weight:700;font-size:46px;line-height:1.03;color:var(--cream);margin:4px
       if(sel!==q.getAttribute('data-correct')){var s=q.getAttribute('data-section');if(miss.indexOf(s)<0)miss.push(s);}
     });
     if(miss.length===0){
-      res.innerHTML='<div class="ok"><h2>You proved the move is yours.</h2><p>Here is your first rule. Paste it into your AI copy-editor project and save it there.</p><div class="code" id="rule"></div><button class="copy" id="copy" type="button">Copy the Rule</button></div>';
+      res.innerHTML='<div class="ok"><h2>Unlocked: Your Lesson 1 AI Editor Rule</h2><p>This is the first rule for the AI copy editor you are building. Copy it, open your AI (ChatGPT, Claude, or any other), and paste it in as a saved or custom instruction. From now on the AI scans every line you give it for weak linking verbs and hedging words, and rebuilds them into strong subject-verb-object sentences. You add one rule like this each lesson, until your AI runs your whole method.</p><div class="code" id="rule"></div><button class="copy" id="copy" type="button">Copy the Rule</button></div>';
       document.getElementById('rule').textContent=rule;
       document.getElementById('rule').innerHTML=document.getElementById('rule').innerHTML.replace(/(\/\/ BLOCK[^\n]*)/,'<span class="cm">$1</span>');
       document.getElementById('copy').addEventListener('click',function(){navigator.clipboard.writeText(rule).then(function(){document.getElementById('copy').textContent='Copied';});});

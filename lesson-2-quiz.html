@@ -138,7 +138,7 @@ h1{font-weight:700;font-size:46px;line-height:1.03;color:var(--cream);margin:4px
       if(sel!==q.getAttribute('data-correct')){var s=q.getAttribute('data-section');if(miss.indexOf(s)<0)miss.push(s);}
     });
     if(miss.length===0){
-      res.innerHTML='<div class="ok"><h2>You just proved you can see it.</h2><p>Here is your second rule. Paste it into your AI copy-editor project, right under the first one, and save it there.</p><div class="code" id="rule"></div><button class="copy" id="copy" type="button">Copy the Rule</button></div>';
+      res.innerHTML='<div class="ok"><h2>Unlocked: Your Lesson 2 AI Editor Rule</h2><p>This is the second rule for your AI copy editor. Copy it and paste it into that same AI, right under your Lesson 1 rule, as a saved instruction. Now the AI also checks that every sentence lands its point in the first few words and carries one idea at a time. Keep stacking one rule each lesson.</p><div class="code" id="rule"></div><button class="copy" id="copy" type="button">Copy the Rule</button></div>';
       document.getElementById('rule').textContent=rule;
       document.getElementById('rule').innerHTML=document.getElementById('rule').innerHTML.replace(/(\/\/ BLOCK[^\n]*)/,'<span class="cm">$1</span>');
       document.getElementById('copy').addEventListener('click',function(){navigator.clipboard.writeText(rule).then(function(){document.getElementById('copy').textContent='Copied';});});
