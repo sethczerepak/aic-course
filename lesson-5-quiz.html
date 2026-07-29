@@ -1,0 +1,149 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson Quiz — Context Before Claim — AI Copywriting for Beginners</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fdfbf6;--dim:#9aa2b6;--blue:#8ea0c4;--gold:#e6b877;--goldb:#f6c445;--oxblood:#8a2230;--rose:#c65a6e;--border:rgba(255,255,255,.12);}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{background:#10121b;}body{background:radial-gradient(130% 75% at 50% -12%, #24283b 0%, #191d2b 46%, #10121b 100%) no-repeat, #10121b;color:var(--cream);font-family:'Cormorant Garamond',Georgia,serif;padding-bottom:20px;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+.hdr{display:flex;justify-content:space-between;align-items:flex-start;padding:26px 0 14px;border-bottom:1px solid var(--border);}
+.hdr .lbl{font-family:'Inter',sans-serif;font-weight:700;font-size:10px;letter-spacing:.16em;color:#7f8aa4;text-transform:uppercase;}
+.hdr .val{font-weight:700;font-size:18px;color:#e9e5db;margin-top:2px;}
+.hdr .r{text-align:right;}
+.top{text-align:center;padding:34px 0 4px;}
+.pillar{font-family:'Inter',sans-serif;font-weight:700;font-size:12px;letter-spacing:.3em;color:var(--blue);text-transform:uppercase;}
+.lesnum{font-weight:500;font-size:16px;letter-spacing:.24em;color:var(--rose);text-transform:uppercase;margin-top:6px;}
+h1{font-weight:700;font-size:46px;line-height:1.03;color:var(--cream);margin:4px 0 6px;}
+.sub{font-weight:500;font-size:16px;letter-spacing:.14em;color:var(--dim);text-transform:uppercase;}
+.divide{width:150px;height:2px;background:linear-gradient(90deg,rgba(138,34,48,0),var(--oxblood),rgba(138,34,48,0));margin:20px auto 4px;}
+.intro{text-align:center;font-style:italic;font-size:19px;color:#d8d3c6;max-width:600px;margin:12px auto 26px;line-height:1.45;}
+.q{background:rgba(255,255,255,.035);border:1px solid var(--border);border-radius:14px;padding:22px 24px;margin:0 0 16px;}
+.qnum{font-family:'Inter',sans-serif;font-weight:700;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.qtext{font-weight:600;font-size:23px;color:var(--cream);margin-bottom:16px;line-height:1.32;}
+.opt{display:block;width:100%;text-align:left;margin:0 0 10px;padding:14px 18px;border:1px solid var(--border);border-radius:10px;background:rgba(255,255,255,.02);color:#e7e3d8;cursor:pointer;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:19px;line-height:1.32;transition:.12s;}
+.opt:last-child{margin-bottom:0;}
+.opt:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.22);}
+.opt[aria-pressed="true"]{border:2px solid var(--gold);background:linear-gradient(90deg,rgba(224,181,103,.2),rgba(224,181,103,.05));color:var(--cream);}
+.unlock{display:block;width:100%;margin:8px 0 0;padding:17px;border:none;border-radius:11px;background:var(--goldb);color:#1a1d24;font-family:'Inter',sans-serif;font-weight:700;font-size:17px;letter-spacing:.01em;cursor:pointer;box-shadow:0 4px 0 #b98a1e;}
+.unlock:hover{filter:brightness(1.05);}
+.result{margin-top:22px;}
+.miss{background:rgba(160,50,50,.1);border:1px solid rgba(195,75,75,.5);border-radius:14px;padding:22px 24px;}
+.miss h3{font-family:'Inter',sans-serif;font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--rose);margin-bottom:8px;}
+.miss p{font-size:19px;color:#d8d3c6;margin-bottom:6px;}
+.miss ul{margin:6px 0 18px 22px;font-size:18px;color:#e7e3d8;line-height:1.5;}
+.rewatch{display:inline-block;padding:13px 26px;border-radius:9px;background:rgba(142,160,196,.12);border:1px solid var(--blue);color:#cdd6e6;font-family:'Inter',sans-serif;font-weight:700;font-size:15px;text-decoration:none;}
+.rewatch:hover{background:rgba(142,160,196,.2);}
+.ok{text-align:center;}
+.ok h2{font-weight:700;font-size:34px;color:var(--gold);margin-bottom:8px;}
+.ok p{font-size:19px;color:#d8d3c6;margin-bottom:18px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.4;}
+.code{text-align:left;background:#0d1220;border:1px solid var(--border);border-radius:12px;padding:22px 24px;font-family:'Consolas','Courier New',monospace;font-size:14.5px;line-height:1.55;color:#d3dcea;white-space:pre-wrap;}
+.code .cm{color:var(--gold);font-weight:bold;}
+.copy{margin-top:14px;padding:14px 30px;border:none;border-radius:9px;background:var(--goldb);color:#1a1d24;font-family:'Inter',sans-serif;font-weight:700;font-size:16px;cursor:pointer;box-shadow:0 4px 0 #b98a1e;}
+.foot{text-align:center;margin-top:44px;padding-top:22px;border-top:1px solid var(--border);}
+.foot img{width:128px;opacity:.72;}
+.foot .site{font-weight:500;font-size:14px;letter-spacing:.18em;color:#7f8aa4;margin-top:8px;text-transform:uppercase;}
+</style></head>
+<body>
+<div class="wrap">
+  <div class="hdr">
+    <div><div class="lbl">Course</div><div class="val">AI Copywriting &mdash; Level I: Beginner</div></div>
+    <div class="r"><div class="lbl">Instructor</div><div class="val">Seth Czerepak</div></div>
+  </div>
+  <div class="top">
+    <div class="pillar">Pillar 2 &middot; Clarity</div>
+    <div class="lesnum">Lesson 2</div>
+    <h1>The Context Before Claim Quiz</h1>
+    <div class="sub">The Compared-To-What Test</div>
+    <div class="divide"></div>
+    <div class="intro">Answer all five to unlock your fifth rule &mdash; the Builder Block you paste into your AI, right under the first four &mdash; plus the practice prompt you can use right away. Miss one and it stays locked, so rewatch and try again.</div>
+  </div>
+  <div id="qz">
+    <div class="q" data-correct="A" data-section="the part on why it works &mdash; the mind can only compare, so a fact with no reference point can&rsquo;t be felt">
+      <div class="qnum">Question 1 of 5</div>
+      <div class="qtext">Why does a bare fact bounce right off a reader?</div>
+      <button class="opt" data-opt="A" aria-pressed="false" type="button">The mind can&rsquo;t judge a thing on its own &mdash; it can only compare. With no reference point, the reader has no ruler, so the fact can&rsquo;t be felt.</button>
+      <button class="opt" data-opt="B" aria-pressed="false" type="button">The fact is written in too many words, so the reader loses patience before the point lands.</button>
+    </div>
+    <div class="q" data-correct="B" data-section="the part on the strongest frame &mdash; the before, the contrast, what everyone else does">
+      <div class="qnum">Question 2 of 5</div>
+      <div class="qtext">What is the strongest kind of frame?</div>
+      <button class="opt" data-opt="A" aria-pressed="false" type="button">A bold promise about the future, painted as vividly as you can make it.</button>
+      <button class="opt" data-opt="B" aria-pressed="false" type="button">A contrast &mdash; the before, or what everyone else does &mdash; so your claim arrives as a break from it.</button>
+    </div>
+    <div class="q" data-correct="A" data-section="the part on order &mdash; frame first, then claim, and never bury the claim">
+      <div class="qnum">Question 3 of 5</div>
+      <div class="qtext">What order do the frame and the claim go in?</div>
+      <button class="opt" data-opt="A" aria-pressed="false" type="button">Frame first, then the claim &mdash; set the reference point, then let the fact land.</button>
+      <button class="opt" data-opt="B" aria-pressed="false" type="button">Claim first to grab attention, then add the frame afterward to back it up.</button>
+    </div>
+    <div class="q" data-correct="B" data-section="the warning &mdash; the frame has to be true, never a fabricated before or standard">
+      <div class="qnum">Question 4 of 5</div>
+      <div class="qtext">What has to be true about the frame?</div>
+      <button class="opt" data-opt="A" aria-pressed="false" type="button">It has to be dramatic &mdash; the bigger the gap you can show, the better, even if you round things up.</button>
+      <button class="opt" data-opt="B" aria-pressed="false" type="button">It has to be real. Never invent a fake before or standard to make your claim look bigger.</button>
+    </div>
+    <div class="q" data-correct="A" data-section="the part on what AI can&rsquo;t do &mdash; it can&rsquo;t know your reader&rsquo;s world, so you supply the frame">
+      <div class="qnum">Question 5 of 5</div>
+      <div class="qtext">What can AI not do for you here?</div>
+      <button class="opt" data-opt="A" aria-pressed="false" type="button">It can&rsquo;t know what your specific reader treats as normal, so it can&rsquo;t supply the frame. You bring the reference point; AI arranges it around the claim.</button>
+      <button class="opt" data-opt="B" aria-pressed="false" type="button">It can&rsquo;t write two sentences in a row, so you have to paste the finished frame in yourself.</button>
+    </div>
+  </div>
+  <button id="unlock" class="unlock" type="button">Unlock the Rule</button>
+  <div id="result" class="result"></div>
+  <div class="foot"><img src="vq-logo.webp" alt="VQ Success"><div class="site">www.vqsuccess.com</div></div>
+</div>
+<script>
+(function(){
+  var VIDEO_URL = "https://www.youtube.com/watch?v=OTxlFDL-hBc";
+  var rule = "// BLOCK 5. CLARITY. CONTEXT BEFORE CLAIM.\n"+
+"Before any claim, result, price, number, or comparison, check whether the reader has been given a frame to judge it against. A frame is a reference point: a before, an industry standard, a cost of doing nothing, a what-everyone-else-does.\n"+
+"If a claim appears with no frame in front of it, stop and ask me: compared to what. Do not invent the reference point. I have to give it to you, because it lives in my reader's world, not in your training.\n"+
+"When I supply the frame, place it immediately before the claim, in that order: frame, then claim. Keep the frame to one line. Never bury the claim under setup.\n"+
+"Never fabricate a before, a standard, or a comparison to make a claim look bigger. If I cannot supply a true frame, leave the claim bare rather than prop it up with a fake one.\n"+
+"Run this rule after the Concrete and Specific rule, on every claim, before any rule I add in a later lesson.";
+  var prompt = "Here is a claim: [paste your claim here].\n"+
+"Do not rewrite it yet. Do not invent any facts, numbers, or comparisons. You do not know my reader's world.\n"+
+"First, ask me one question: compared to what. What is the reference point my reader already measures this against. The before, the industry standard, the cost of doing nothing, what everyone else does.\n"+
+"After I answer, write two sentences. The first is the frame, using only the reference point I gave you. The second is my original claim. Frame first, claim second. If I did not give you a real reference point, tell me the claim has nothing to land on yet, and ask again.";
+  var qs = Array.prototype.slice.call(document.querySelectorAll('#qz .q'));
+  qs.forEach(function(q){
+    q.querySelectorAll('.opt').forEach(function(b){
+      b.addEventListener('click',function(){
+        q.querySelectorAll('.opt').forEach(function(x){x.setAttribute('aria-pressed','false');});
+        b.setAttribute('aria-pressed','true');
+      });
+    });
+  });
+  document.getElementById('unlock').addEventListener('click',function(){
+    var res = document.getElementById('result');
+    var answered = qs.every(function(q){return q.querySelector('.opt[aria-pressed="true"]');});
+    if(!answered){res.innerHTML='<div class="miss"><h3>Hold on</h3><p>Answer all five questions first.</p></div>';return;}
+    var miss=[];
+    qs.forEach(function(q){
+      var sel=q.querySelector('.opt[aria-pressed="true"]').getAttribute('data-opt');
+      if(sel!==q.getAttribute('data-correct')){var s=q.getAttribute('data-section');if(miss.indexOf(s)<0)miss.push(s);}
+    });
+    if(miss.length===0){
+      res.innerHTML='<div class="ok"><h2>Unlocked: Your Lesson 5 Rule and Practice Prompt</h2><p>You passed. Two things are now yours. First, the fifth rule for your AI copy editor. Copy it and paste it into the same AI, right under your Lesson 4 rule. Now your editor also stops a bare claim and asks you the one question that matters: compared to what.</p><div class="code" id="rule"></div><button class="copy" id="copy" type="button">Copy the Rule</button><p style="margin-top:28px">Second, your practice prompt. Open a new chat in your AI app, paste this in, then swap your own claim into the brackets. The AI will ask you &ldquo;compared to what,&rdquo; and once you answer, it puts your frame in front of your claim.</p><div class="code" id="prompt"></div><button class="copy" id="copyp" type="button">Copy the Prompt</button></div>';
+      document.getElementById('rule').textContent=rule;
+      document.getElementById('rule').innerHTML=document.getElementById('rule').innerHTML.replace(/(\/\/ BLOCK[^\n]*)/,'<span class="cm">$1</span>');
+      document.getElementById('prompt').textContent=prompt;
+      document.getElementById('copy').addEventListener('click',function(){navigator.clipboard.writeText(rule).then(function(){document.getElementById('copy').textContent='Copied';});});
+      document.getElementById('copyp').addEventListener('click',function(){navigator.clipboard.writeText(prompt).then(function(){document.getElementById('copyp').textContent='Copied';});});
+    } else {
+      var list=miss.map(function(s){return '<li>'+s+'</li>';}).join('');
+      res.innerHTML='<div class="miss"><h3>Not yet &mdash; the rule stays locked</h3><p>Rewatch these parts of the lesson, then try again:</p><ul>'+list+'</ul><a class="rewatch" href="'+VIDEO_URL+'" target="_blank" rel="noopener">Rewatch Lesson 5 &nbsp;&rarr;</a></div>';
+    }
+    res.scrollIntoView({behavior:'smooth',block:'center'});
+  });
+  function postH(){ if(window.parent!==window){ try{ window.parent.postMessage({aicQuizHeight: document.documentElement.scrollHeight}, '*'); }catch(e){} } }
+  window.addEventListener('load', function(){ postH(); setTimeout(postH,350); });
+  window.addEventListener('resize', postH);
+  try{ new MutationObserver(postH).observe(document.body, {subtree:true, childList:true, attributes:true, attributeFilter:['aria-pressed','style']}); }catch(e){}
+})();
+</script>
+</body></html>
