@@ -1,0 +1,156 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 8 Quiz — AI Copywriting for Beginners</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fdfbf6;--dim:#9aa2b6;--blue:#8ea0c4;--gold:#e6b877;--goldb:#f6c445;--oxblood:#8a2230;--rose:#c65a6e;--border:rgba(255,255,255,.12);}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{background:#10121b;}body{background:radial-gradient(130% 75% at 50% -12%, #24283b 0%, #191d2b 46%, #10121b 100%) no-repeat, #10121b;color:var(--cream);font-family:'Cormorant Garamond',Georgia,serif;padding-bottom:20px;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+.hdr{display:flex;justify-content:space-between;align-items:flex-start;padding:26px 0 14px;border-bottom:1px solid var(--border);}
+.hdr .lbl{font-family:'Inter',sans-serif;font-weight:700;font-size:10px;letter-spacing:.16em;color:#7f8aa4;text-transform:uppercase;}
+.hdr .val{font-weight:700;font-size:18px;color:#e9e5db;margin-top:2px;}
+.hdr .r{text-align:right;}
+.top{text-align:center;padding:34px 0 4px;}
+.pillar{font-family:'Inter',sans-serif;font-weight:700;font-size:12px;letter-spacing:.3em;color:var(--blue);text-transform:uppercase;}
+.lesnum{font-weight:500;font-size:16px;letter-spacing:.24em;color:var(--rose);text-transform:uppercase;margin-top:6px;}
+h1{font-weight:700;font-size:46px;line-height:1.03;color:var(--cream);margin:4px 0 6px;}
+.sub{font-weight:500;font-size:16px;letter-spacing:.14em;color:var(--dim);text-transform:uppercase;}
+.divide{width:150px;height:2px;background:linear-gradient(90deg,rgba(138,34,48,0),var(--oxblood),rgba(138,34,48,0));margin:20px auto 4px;}
+.intro{text-align:center;font-style:italic;font-size:19px;color:#d8d3c6;max-width:600px;margin:12px auto 26px;line-height:1.45;}
+.q{background:rgba(255,255,255,.035);border:1px solid var(--border);border-radius:14px;padding:22px 24px;margin:0 0 16px;}
+.qnum{font-family:'Inter',sans-serif;font-weight:700;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.qtext{font-weight:600;font-size:23px;color:var(--cream);margin-bottom:16px;line-height:1.32;}
+.opt{display:block;width:100%;text-align:left;margin:0 0 10px;padding:14px 18px;border:1px solid var(--border);border-radius:10px;background:rgba(255,255,255,.02);color:#e7e3d8;cursor:pointer;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:19px;line-height:1.32;transition:.12s;}
+.opt:last-child{margin-bottom:0;}
+.opt:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.22);}
+.opt[aria-pressed="true"]{border:2px solid var(--gold);background:linear-gradient(90deg,rgba(224,181,103,.2),rgba(224,181,103,.05));color:var(--cream);}
+.unlock{display:block;width:100%;margin:8px 0 0;padding:17px;border:none;border-radius:11px;background:var(--goldb);color:#1a1d24;font-family:'Inter',sans-serif;font-weight:700;font-size:17px;letter-spacing:.01em;cursor:pointer;box-shadow:0 4px 0 #b98a1e;}
+.unlock:hover{filter:brightness(1.05);}
+.result{margin-top:22px;}
+.miss{background:rgba(160,50,50,.1);border:1px solid rgba(195,75,75,.5);border-radius:14px;padding:22px 24px;}
+.miss h3{font-family:'Inter',sans-serif;font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--rose);margin-bottom:8px;}
+.miss p{font-size:19px;color:#d8d3c6;margin-bottom:6px;}
+.miss ul{margin:6px 0 18px 22px;font-size:18px;color:#e7e3d8;line-height:1.5;}
+.rewatch{display:inline-block;padding:13px 26px;border-radius:9px;background:rgba(142,160,196,.12);border:1px solid var(--blue);color:#cdd6e6;font-family:'Inter',sans-serif;font-weight:700;font-size:15px;text-decoration:none;}
+.rewatch:hover{background:rgba(142,160,196,.2);}
+.ok{text-align:center;}
+.ok h2{font-weight:700;font-size:34px;color:var(--gold);margin-bottom:8px;}
+.ok p{font-size:19px;color:#d8d3c6;margin-bottom:18px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.4;}
+.code{text-align:left;background:#0d1220;border:1px solid var(--border);border-radius:12px;padding:22px 24px;font-family:'Consolas','Courier New',monospace;font-size:14.5px;line-height:1.55;color:#d3dcea;white-space:pre-wrap;}
+.code .cm{color:var(--gold);font-weight:bold;}
+.copy{margin-top:14px;padding:14px 30px;border:none;border-radius:9px;background:var(--goldb);color:#1a1d24;font-family:'Inter',sans-serif;font-weight:700;font-size:16px;cursor:pointer;box-shadow:0 4px 0 #b98a1e;}
+.foot{text-align:center;margin-top:44px;padding-top:22px;border-top:1px solid var(--border);}
+.foot img{width:128px;opacity:.72;}
+.foot .site{font-weight:500;font-size:14px;letter-spacing:.18em;color:#7f8aa4;margin-top:8px;text-transform:uppercase;}
+</style></head>
+<body>
+<div class="wrap">
+  <div class="hdr">
+    <div><div class="lbl">Course</div><div class="val">AI Copywriting &mdash; Level I: Beginner</div></div>
+    <div class="r"><div class="lbl">Instructor</div><div class="val">Seth Czerepak</div></div>
+  </div>
+  <div class="top">
+    <div class="pillar">Pillar 3 &middot; Humanity</div>
+    <div class="lesnum">Lesson 2</div>
+    <h1>The Lesson 8 Quiz</h1>
+    <div class="sub">The Real Reason They Buy</div>
+    <div class="divide"></div>
+    <div class="intro">Answer all five to unlock your eighth rule &mdash; the Builder Block you paste into your AI, right under the first seven &mdash; plus the practice prompt you can use right away. Miss one and it stays locked, so rewatch and try again.</div>
+  </div>
+  <div id="qz">
+    <div class="q" data-correct="A" data-section="the part where the four needs are named, with the deficit across from each">
+      <div class="qnum">Question 1 of 5</div>
+      <div class="qtext">What are the four needs, and what sits across from each one?</div>
+      <button class="opt" data-opt="A" aria-pressed="false" type="button">Validation and shame. Excitement and boredom. Security and fear. Purpose and futility.</button>
+      <button class="opt" data-opt="B" aria-pressed="false" type="button">Money, status, comfort and freedom, each with its own opposite.</button>
+    </div>
+    <div class="q" data-correct="B" data-section="the Rule of One &mdash; one piece of copy runs on one need">
+      <div class="qnum">Question 2 of 5</div>
+      <div class="qtext">How many needs does one piece of copy run on?</div>
+      <button class="opt" data-opt="A" aria-pressed="false" type="button">All four, so the copy reaches the widest possible audience.</button>
+      <button class="opt" data-opt="B" aria-pressed="false" type="button">One. Anything else appears only where it serves the dominant one.</button>
+    </div>
+    <div class="q" data-correct="A" data-section="the drill-down &mdash; the same question asked until the answer is about their life">
+      <div class="qnum">Question 3 of 5</div>
+      <div class="qtext">How do you find which need is live?</div>
+      <button class="opt" data-opt="A" aria-pressed="false" type="button">Ask what solving the problem does for them, then what happens because of that, then what that changes. Same question, until the answer is about their life instead of your product.</button>
+      <button class="opt" data-opt="B" aria-pressed="false" type="button">Ask them directly which of the four needs they feel most strongly.</button>
+    </div>
+    <div class="q" data-correct="B" data-section="the part on attention versus action, and the order you test in">
+      <div class="qnum">Question 4 of 5</div>
+      <div class="qtext">Why can you not assume which need belongs at the opening and which belongs at the close?</div>
+      <button class="opt" data-opt="A" aria-pressed="false" type="button">Because the opening always runs on Excitement and the close always runs on Security.</button>
+      <button class="opt" data-opt="B" aria-pressed="false" type="button">Because the need that gets attention and the need that drives action may differ by market and funnel. It is settled by testing, in this order: audience, stage, stage-native burden, then the need.</button>
+    </div>
+    <div class="q" data-correct="A" data-section="the part on what AI cannot do &mdash; it names the emotion instead of causing it">
+      <div class="qnum">Question 5 of 5</div>
+      <div class="qtext">Why does AI get emotional writing wrong?</div>
+      <button class="opt" data-opt="A" aria-pressed="false" type="button">Asked to be more emotional, it names the emotion, because naming the feeling is the average of emotional writing and average is its default.</button>
+      <button class="opt" data-opt="B" aria-pressed="false" type="button">It avoids emotional language altogether because of its safety training.</button>
+    </div>
+  </div>
+  <button id="unlock" class="unlock" type="button">Unlock the Rule</button>
+  <div id="result" class="result"></div>
+  <div class="foot"><img src="vq-logo.webp" alt="VQ Success"><div class="site">www.vqsuccess.com</div></div>
+</div>
+<script>
+(function(){
+  var VIDEO_URL = "https://youtu.be/O3cXzGnzgmA";
+  var rule = "// BLOCK 8. HUMANITY. THE REAL REASON THEY BUY.\n"+
+"This piece of copy runs on ONE need, not several. Before writing anything, ask me which of these four is dominant for this piece, and which deficit sits across from it. Validation and shame. Excitement and boredom. Security and fear. Purpose and futility.\n"+
+"If I do not know, run the drill down with me. Ask what solving the problem does for my buyer. Then ask what happens because of that. Then ask what that changes. Ask the same question five or six times without switching to a different one, and stop when the answer is about their life instead of my product. Then name which of the four it lands on.\n"+
+"Hold that one need across the whole piece. Any other need may appear only where it serves the dominant one. Cut anything that competes with it for the centre.\n"+
+"Never write the name of a need or a feeling in the copy. Flag and rewrite any line that states an emotion instead of causing one, including 'you deserve,' 'you feel,' 'imagine feeling,' and anything shaped like them.\n"+
+"Replace every flagged line with a moment. A specific scene, a visible action, a sensory detail, or a concrete consequence. Somebody doing something somewhere.\n"+
+"Do not tell me which need belongs at the opening and which belongs at the close. That is a test, not a rule. Ask me whether it has been tested, and if it has not, say so plainly instead of guessing.\n"+
+"Run this rule last, after every earlier rule, on the finished draft.";
+  var prompt = "You are my emotional needs coach. Do not name any emotion in the copy you write for me. That is the one thing you may never do.\n"+
+"\n"+
+"There are 4 needs, each with a deficit across from it. Validation and shame. Excitement and boredom. Security and fear. Purpose and futility.\n"+
+"\n"+
+"First, run the drill down with me. Ask what solving this problem does for my buyer. When I answer, ask what happens because of that. When I answer, ask what that changes. Ask the same question 5 or 6 times, one at a time, never switching to a different kind of question. Stop when my answer is about my buyer's life instead of my product.\n"+
+"\n"+
+"Then tell me which of the 4 needs that answer lands on, and which deficit is doing the pushing.\n"+
+"\n"+
+"Then rewrite my line [paste your line here] so that need is embodied in a moment. A specific scene, a visible action, or a concrete consequence. Somebody doing something somewhere. Do not write the name of the feeling.";
+  var qs = Array.prototype.slice.call(document.querySelectorAll('#qz .q'));
+  qs.forEach(function(q){
+    q.querySelectorAll('.opt').forEach(function(b){
+      b.addEventListener('click',function(){
+        q.querySelectorAll('.opt').forEach(function(x){x.setAttribute('aria-pressed','false');});
+        b.setAttribute('aria-pressed','true');
+      });
+    });
+  });
+  document.getElementById('unlock').addEventListener('click',function(){
+    var res = document.getElementById('result');
+    var answered = qs.every(function(q){return q.querySelector('.opt[aria-pressed="true"]');});
+    if(!answered){res.innerHTML='<div class="miss"><h3>Hold on</h3><p>Answer all five questions first.</p></div>';return;}
+    var miss=[];
+    qs.forEach(function(q){
+      var sel=q.querySelector('.opt[aria-pressed="true"]').getAttribute('data-opt');
+      if(sel!==q.getAttribute('data-correct')){var s=q.getAttribute('data-section');if(miss.indexOf(s)<0)miss.push(s);}
+    });
+    if(miss.length===0){
+      res.innerHTML='<div class="ok"><h2>Unlocked: Your Lesson 8 Rule and Practice Prompt</h2><p>You passed. Two things are now yours. First, the eighth rule for your AI copy editor. Copy it and paste it into the same AI, right under your Lesson 7 rule. Now your editor holds one need across the whole piece and refuses to name a feeling instead of causing one.</p><div class="code" id="rule"></div><button class="copy" id="copy" type="button">Copy the Rule</button><p style="margin-top:28px">Second, your practice prompt. Open a new chat in your AI app, paste this in, then swap your own line into the brackets. The AI runs the drill down with you, names which of the four needs it lands on, and rebuilds your line as a moment instead of a statement.</p><div class="code" id="prompt"></div><button class="copy" id="copyp" type="button">Copy the Prompt</button></div>';
+      document.getElementById('rule').textContent=rule;
+      document.getElementById('rule').innerHTML=document.getElementById('rule').innerHTML.replace(/(\/\/ BLOCK[^\n]*)/,'<span class="cm">$1</span>');
+      document.getElementById('prompt').textContent=prompt;
+      document.getElementById('copy').addEventListener('click',function(){navigator.clipboard.writeText(rule).then(function(){document.getElementById('copy').textContent='Copied';});});
+      document.getElementById('copyp').addEventListener('click',function(){navigator.clipboard.writeText(prompt).then(function(){document.getElementById('copyp').textContent='Copied';});});
+    } else {
+      var list=miss.map(function(s){return '<li>'+s+'</li>';}).join('');
+      res.innerHTML='<div class="miss"><h3>Not yet &mdash; the rule stays locked</h3><p>Rewatch these parts of the lesson, then try again:</p><ul>'+list+'</ul><a class="rewatch" href="'+VIDEO_URL+'" target="_blank" rel="noopener">Rewatch Lesson 8 &nbsp;&rarr;</a></div>';
+    }
+    res.scrollIntoView({behavior:'smooth',block:'center'});
+  });
+  var _lastH=0;function postH(){ if(window.parent!==window){ try{ var w=document.querySelector('.wrap'); var h=w? Math.ceil(w.getBoundingClientRect().bottom + window.scrollY + 24) : document.body.scrollHeight; if(Math.abs(h-_lastH)>2){ _lastH=h; window.parent.postMessage({aicQuizHeight: h}, '*'); } }catch(e){} } }
+  window.addEventListener('load', function(){ postH(); setTimeout(postH,350); });
+  window.addEventListener('resize', postH);
+  try{ new MutationObserver(postH).observe(document.body, {subtree:true, childList:true, attributes:true, attributeFilter:['aria-pressed','style']}); }catch(e){}
+})();
+</script>
+</body></html>

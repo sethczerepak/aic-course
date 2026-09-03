@@ -1,0 +1,157 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 9 Quiz — AI Copywriting for Beginners</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fdfbf6;--dim:#9aa2b6;--blue:#8ea0c4;--gold:#e6b877;--goldb:#f6c445;--oxblood:#8a2230;--rose:#c65a6e;--border:rgba(255,255,255,.12);}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{background:#10121b;}body{background:radial-gradient(130% 75% at 50% -12%, #24283b 0%, #191d2b 46%, #10121b 100%) no-repeat, #10121b;color:var(--cream);font-family:'Cormorant Garamond',Georgia,serif;padding-bottom:20px;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+.hdr{display:flex;justify-content:space-between;align-items:flex-start;padding:26px 0 14px;border-bottom:1px solid var(--border);}
+.hdr .lbl{font-family:'Inter',sans-serif;font-weight:700;font-size:10px;letter-spacing:.16em;color:#7f8aa4;text-transform:uppercase;}
+.hdr .val{font-weight:700;font-size:18px;color:#e9e5db;margin-top:2px;}
+.hdr .r{text-align:right;}
+.top{text-align:center;padding:34px 0 4px;}
+.pillar{font-family:'Inter',sans-serif;font-weight:700;font-size:12px;letter-spacing:.3em;color:var(--blue);text-transform:uppercase;}
+.lesnum{font-weight:500;font-size:16px;letter-spacing:.24em;color:var(--rose);text-transform:uppercase;margin-top:6px;}
+h1{font-weight:700;font-size:46px;line-height:1.03;color:var(--cream);margin:4px 0 6px;}
+.sub{font-weight:500;font-size:16px;letter-spacing:.14em;color:var(--dim);text-transform:uppercase;}
+.divide{width:150px;height:2px;background:linear-gradient(90deg,rgba(138,34,48,0),var(--oxblood),rgba(138,34,48,0));margin:20px auto 4px;}
+.intro{text-align:center;font-style:italic;font-size:19px;color:#d8d3c6;max-width:600px;margin:12px auto 26px;line-height:1.45;}
+.q{background:rgba(255,255,255,.035);border:1px solid var(--border);border-radius:14px;padding:22px 24px;margin:0 0 16px;}
+.qnum{font-family:'Inter',sans-serif;font-weight:700;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.qtext{font-weight:600;font-size:23px;color:var(--cream);margin-bottom:16px;line-height:1.32;}
+.opt{display:block;width:100%;text-align:left;margin:0 0 10px;padding:14px 18px;border:1px solid var(--border);border-radius:10px;background:rgba(255,255,255,.02);color:#e7e3d8;cursor:pointer;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:19px;line-height:1.32;transition:.12s;}
+.opt:last-child{margin-bottom:0;}
+.opt:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.22);}
+.opt[aria-pressed="true"]{border:2px solid var(--gold);background:linear-gradient(90deg,rgba(224,181,103,.2),rgba(224,181,103,.05));color:var(--cream);}
+.unlock{display:block;width:100%;margin:8px 0 0;padding:17px;border:none;border-radius:11px;background:var(--goldb);color:#1a1d24;font-family:'Inter',sans-serif;font-weight:700;font-size:17px;letter-spacing:.01em;cursor:pointer;box-shadow:0 4px 0 #b98a1e;}
+.unlock:hover{filter:brightness(1.05);}
+.result{margin-top:22px;}
+.miss{background:rgba(160,50,50,.1);border:1px solid rgba(195,75,75,.5);border-radius:14px;padding:22px 24px;}
+.miss h3{font-family:'Inter',sans-serif;font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--rose);margin-bottom:8px;}
+.miss p{font-size:19px;color:#d8d3c6;margin-bottom:6px;}
+.miss ul{margin:6px 0 18px 22px;font-size:18px;color:#e7e3d8;line-height:1.5;}
+.rewatch{display:inline-block;padding:13px 26px;border-radius:9px;background:rgba(142,160,196,.12);border:1px solid var(--blue);color:#cdd6e6;font-family:'Inter',sans-serif;font-weight:700;font-size:15px;text-decoration:none;}
+.rewatch:hover{background:rgba(142,160,196,.2);}
+.ok{text-align:center;}
+.ok h2{font-weight:700;font-size:34px;color:var(--gold);margin-bottom:8px;}
+.ok p{font-size:19px;color:#d8d3c6;margin-bottom:18px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.4;}
+.code{text-align:left;background:#0d1220;border:1px solid var(--border);border-radius:12px;padding:22px 24px;font-family:'Consolas','Courier New',monospace;font-size:14.5px;line-height:1.55;color:#d3dcea;white-space:pre-wrap;}
+.code .cm{color:var(--gold);font-weight:bold;}
+.copy{margin-top:14px;padding:14px 30px;border:none;border-radius:9px;background:var(--goldb);color:#1a1d24;font-family:'Inter',sans-serif;font-weight:700;font-size:16px;cursor:pointer;box-shadow:0 4px 0 #b98a1e;}
+.foot{text-align:center;margin-top:44px;padding-top:22px;border-top:1px solid var(--border);}
+.foot img{width:128px;opacity:.72;}
+.foot .site{font-weight:500;font-size:14px;letter-spacing:.18em;color:#7f8aa4;margin-top:8px;text-transform:uppercase;}
+</style></head>
+<body>
+<div class="wrap">
+  <div class="hdr">
+    <div><div class="lbl">Course</div><div class="val">AI Copywriting &mdash; Level I: Beginner</div></div>
+    <div class="r"><div class="lbl">Instructor</div><div class="val">Seth Czerepak</div></div>
+  </div>
+  <div class="top">
+    <div class="pillar">Pillar 3 &middot; Humanity</div>
+    <div class="lesnum">Lesson 3</div>
+    <h1>The Lesson 9 Quiz</h1>
+    <div class="sub">Rhythm and Cadence</div>
+    <div class="divide"></div>
+    <div class="intro">Answer all five to unlock your ninth and final rule &mdash; the Builder Block you paste into your AI, right under the first eight &mdash; plus the practice prompt you can use right away. Miss one and it stays locked, so rewatch and try again.</div>
+  </div>
+  <div id="qz">
+    <div class="q" data-correct="B" data-section="the opening &mdash; what actually gives machine writing away">
+      <div class="qnum">Question 1 of 5</div>
+      <div class="qtext">What is the loudest tell that AI wrote something?</div>
+      <button class="opt" data-opt="A" aria-pressed="false" type="button">The vocabulary is too advanced for the audience.</button>
+      <button class="opt" data-opt="B" aria-pressed="false" type="button">The sentences are all about the same length. Human writing is uneven, machine writing is even.</button>
+    </div>
+    <div class="q" data-correct="A" data-section="the part where burstiness is defined">
+      <div class="qnum">Question 2 of 5</div>
+      <div class="qtext">What is burstiness?</div>
+      <button class="opt" data-opt="A" aria-pressed="false" type="button">The variation in length between sentences that sit next to each other.</button>
+      <button class="opt" data-opt="B" aria-pressed="false" type="button">How many separate ideas a single paragraph carries.</button>
+    </div>
+    <div class="q" data-correct="A" data-section="the part on the three shapes you can build on purpose">
+      <div class="qnum">Question 3 of 5</div>
+      <div class="qtext">What are the three sentence shapes?</div>
+      <button class="opt" data-opt="A" aria-pressed="false" type="button">Short long short. Long shorter shortest. Short longer longest.</button>
+      <button class="opt" data-opt="B" aria-pressed="false" type="button">Short short short. Long long long. Medium medium medium.</button>
+    </div>
+    <div class="q" data-correct="B" data-section="the third shape &mdash; where the momentum drops the biggest fact">
+      <div class="qnum">Question 4 of 5</div>
+      <div class="qtext">In the short, longer, longest shape, where does the most important fact go?</div>
+      <button class="opt" data-opt="A" aria-pressed="false" type="button">In the first sentence, before the reader loses interest.</button>
+      <button class="opt" data-opt="B" aria-pressed="false" type="button">In the last and longest sentence, where the momentum drops it.</button>
+    </div>
+    <div class="q" data-correct="A" data-section="the close &mdash; why you count rather than trust your ear">
+      <div class="qnum">Question 5 of 5</div>
+      <div class="qtext">Why do you count instead of trusting your ear?</div>
+      <button class="opt" data-opt="A" aria-pressed="false" type="button">You already know what you meant, so your ear reads your own writing the way you intended rather than the way it lands.</button>
+      <button class="opt" data-opt="B" aria-pressed="false" type="button">Counting is faster than reading the paragraph back.</button>
+    </div>
+  </div>
+  <button id="unlock" class="unlock" type="button">Unlock the Rule</button>
+  <div id="result" class="result"></div>
+  <div class="foot"><img src="vq-logo.webp" alt="VQ Success"><div class="site">www.vqsuccess.com</div></div>
+</div>
+<script>
+(function(){
+  var VIDEO_URL = "https://youtu.be/HAEGUeKQet0";
+  var rule = "// BLOCK 9. HUMANITY. RHYTHM AND CADENCE.\n"+
+"Before returning any paragraph, count the words in each sentence and check the row. If most sentences sit within about 3 words of each other, the paragraph is uniform and you rebuild it before showing me.\n"+
+"Rebuild using one of these shapes, and vary which one you use across consecutive paragraphs. Short, long, short. Long, shorter, shortest. Short, longer, longest, building toward the biggest fact and landing it in the final, longest sentence.\n"+
+"Sentence fragments are allowed. Use them.\n"+
+"Use alliteration between at most two or three neighbouring words, and only where it sounds natural.\n"+
+"Never mention rhythm, burstiness, cadence, or sentence length inside the copy. The technique is silent.\n"+
+"Run this rule LAST, on the finished draft, after every other rule. It does not outrank Block 3: if shortening a sentence would cost a concrete detail or a real number, keep the detail and find the variation somewhere else. It does not outrank Block 7: never cut a phrase in my buyer's own language to hit a shape. Where rhythm and clarity collide, clarity wins.";
+  var prompt = "Here is a paragraph: [paste your paragraph here].\n"+
+"\n"+
+"First, count the words in every sentence and list the counts in order. Do not rewrite anything yet.\n"+
+"\n"+
+"If most of those numbers sit within about 3 of each other, tell me the paragraph is uniform and say so plainly.\n"+
+"\n"+
+"Then rebuild it using one of these three shapes, and tell me which one you used. Short, long, short. Long, shorter, shortest. Short, longer, longest.\n"+
+"\n"+
+"Keep every fact, every number and every specific detail exactly as I wrote it. Do not add anything. Do not mention rhythm or sentence length in the paragraph itself.\n"+
+"\n"+
+"Then list the new word counts so I can see the difference.";
+  var qs = Array.prototype.slice.call(document.querySelectorAll('#qz .q'));
+  qs.forEach(function(q){
+    q.querySelectorAll('.opt').forEach(function(b){
+      b.addEventListener('click',function(){
+        q.querySelectorAll('.opt').forEach(function(x){x.setAttribute('aria-pressed','false');});
+        b.setAttribute('aria-pressed','true');
+      });
+    });
+  });
+  document.getElementById('unlock').addEventListener('click',function(){
+    var res = document.getElementById('result');
+    var answered = qs.every(function(q){return q.querySelector('.opt[aria-pressed="true"]');});
+    if(!answered){res.innerHTML='<div class="miss"><h3>Hold on</h3><p>Answer all five questions first.</p></div>';return;}
+    var miss=[];
+    qs.forEach(function(q){
+      var sel=q.querySelector('.opt[aria-pressed="true"]').getAttribute('data-opt');
+      if(sel!==q.getAttribute('data-correct')){var s=q.getAttribute('data-section');if(miss.indexOf(s)<0)miss.push(s);}
+    });
+    if(miss.length===0){
+      res.innerHTML='<div class="ok"><h2>Unlocked: Your Lesson 9 Rule and Practice Prompt</h2><p>You passed. Two things are now yours. First, the ninth and final rule for your AI copy editor. Copy it and paste it into the same AI, right under your Lesson 8 rule. Your editor is now complete: nine rules, nine lessons, three pillars.</p><div class="code" id="rule"></div><button class="copy" id="copy" type="button">Copy the Rule</button><p style="margin-top:28px">Second, your practice prompt. Open a new chat in your AI app, paste this in, then paste in any paragraph. The AI counts every sentence, tells you if the paragraph is flat, and rebuilds it on one of the three shapes.</p><div class="code" id="prompt"></div><button class="copy" id="copyp" type="button">Copy the Prompt</button></div>';
+      document.getElementById('rule').textContent=rule;
+      document.getElementById('rule').innerHTML=document.getElementById('rule').innerHTML.replace(/(\/\/ BLOCK[^\n]*)/,'<span class="cm">$1</span>');
+      document.getElementById('prompt').textContent=prompt;
+      document.getElementById('copy').addEventListener('click',function(){navigator.clipboard.writeText(rule).then(function(){document.getElementById('copy').textContent='Copied';});});
+      document.getElementById('copyp').addEventListener('click',function(){navigator.clipboard.writeText(prompt).then(function(){document.getElementById('copyp').textContent='Copied';});});
+    } else {
+      var list=miss.map(function(s){return '<li>'+s+'</li>';}).join('');
+      res.innerHTML='<div class="miss"><h3>Not yet &mdash; the rule stays locked</h3><p>Rewatch these parts of the lesson, then try again:</p><ul>'+list+'</ul><a class="rewatch" href="'+VIDEO_URL+'" target="_blank" rel="noopener">Rewatch Lesson 9 &nbsp;&rarr;</a></div>';
+    }
+    res.scrollIntoView({behavior:'smooth',block:'center'});
+  });
+  var _lastH=0;function postH(){ if(window.parent!==window){ try{ var w=document.querySelector('.wrap'); var h=w? Math.ceil(w.getBoundingClientRect().bottom + window.scrollY + 24) : document.body.scrollHeight; if(Math.abs(h-_lastH)>2){ _lastH=h; window.parent.postMessage({aicQuizHeight: h}, '*'); } }catch(e){} } }
+  window.addEventListener('load', function(){ postH(); setTimeout(postH,350); });
+  window.addEventListener('resize', postH);
+  try{ new MutationObserver(postH).observe(document.body, {subtree:true, childList:true, attributes:true, attributeFilter:['aria-pressed','style']}); }catch(e){}
+})();
+</script>
+</body></html>
